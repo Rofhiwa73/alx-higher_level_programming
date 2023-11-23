@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 
 def islower(c):
     # ASCII value of the char is within the range of lowercase letters or not.
