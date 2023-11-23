@@ -1,12 +1,20 @@
 #!/usr/bin/python3
 
 def uppercase(str):
+    # Initialize an empty string to store the result
+    result = ""
+
+    # Iterate through each character in the input string
     for char in str:
-        # Check if char is a lowercase letter.
+        # Check if the character is a lowercase letter
         if 'a' <= char <= 'z':
-            # Convert the lowercase to uppercase using ASCII values.
+            # Convert the lowercase letter to uppercase using ASCII values
             uppercase_char = chr(ord(char) - ord('a') + ord('A'))
-            print("{}".format(uppercase_char), end="")
+            # Append the uppercase character to the result string
+            result += uppercase_char
         else:
-            print("{}".format(char), end="")
-    print() # Print a new line at the end.
+            # If the character is not a lowercase letter, append it unchanged
+            result += char
+
+    # Print the final result
+    print(result, end="")
