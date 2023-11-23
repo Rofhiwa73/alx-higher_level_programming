@@ -12,9 +12,12 @@ def uppercase(str):
             uppercase_char = chr(ord(char) - ord('a') + ord('A'))
             # Append the uppercase character to the result string
             result += uppercase_char
+        elif char == ' ' or char == '\n':
+            print("{}".format(result), end="")
+            result = ""
         else:
             # If the character is not a lowercase letter, append it unchanged
             result += char
 
     # Print the final result
-    print(result, end="")
+    print("{}".format(result), end="")
